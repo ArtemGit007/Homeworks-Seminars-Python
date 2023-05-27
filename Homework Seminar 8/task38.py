@@ -100,7 +100,7 @@ def change_records(file_name: str):
     record_id = check_id_record(file_name, 'изменить')
     if record_id != 'q':
         replaced_line = f'{int(record_id)};' + ';'.join(
-            input('Введите фамилию, имя, отчество, номер телефона через пробел\n').split()[:4]) + ';\n'
+            input('Введите фамилию, имя, отчество, номер телефона через пробел, описание\n').split()[:4]) + ';\n'
         confirm = confirmation('изменение')
         if confirm == 'y':
             replace_record_line(file_name, record_id, replaced_line)
@@ -114,7 +114,7 @@ def delete_records(file_name: str):
             replace_record_line(file_name, record_id, '')
 
 
-path = ''
+path = 'phon.txt'
 
 try:                        # исключения try/except/finally
     file = open(path, 'r')  # открыть файл
