@@ -114,7 +114,7 @@ def delete_records(file_name: str):
             replace_record_line(file_name, record_id, '')
 
 
-path = 'phon.txt'
+path = ''
 
 try:                        # исключения try/except/finally
     file = open(path, 'r')  # открыть файл
